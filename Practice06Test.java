@@ -18,16 +18,21 @@ public class Practice06Test {
 	
 	
 	public void clearData() {
+		try{
 		while (!queue.empty()) {
 			queue.dequeue();
 		}
 		while (!stack.empty()) {
 			stack.pop();
 		}
+		}catch(Exception e){
+
+		}
 	}
 	
 	
 	public boolean isPalindrome(String item) {
+		try{
 		clearData();
 		for (int i = 0; i < item.length(); i++) {
 			String substring = item.substring(i, i+1).toLowerCase();
@@ -49,6 +54,10 @@ public class Practice06Test {
 		
 		return true;
 	}
+	catch(Exception e){
+		return false; 
+	}
+}
 	
 	
 	public void runTest() {
